@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multi-colored Progress Bars</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+
+            .progress-container {
+                margin-bottom: 15px;
+            }
+
+            .progress-label {
+                margin-bottom: 5px;
+                font-size: 14px;
+                color: #5a5a5a;
+            }
+
+            .progress-bar {
+                display: flex;
+                width: 100%;
+                height: 10px;
+                background-color: #d3d3d3;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .progress-segment {
+                height: 100%;
+                display: inline-block;
+            }
+
+            /* Predefined classes for colors */
+            .blue {
+                background-color: #2AAACB;
+            }
+
+            .green {
+                background-color: #4CAF50;
+            }
+
+            .yellow {
+                background-color: #FFCC00;
+            }
+
+            .red {
+                background-color: #FF5733;
+            }
+
+            .gray {
+                background-color: #D3D3D3;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="progress-container">
+            <div class="progress-label">Knitting</div>
+            <div class="progress-bar">
+                <div class="progress-segment blue" style="width: 70%;"></div>
+                <div class="progress-segment green" style="width: 20%;"></div>
+                <div class="progress-segment gray" style="width: 10%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">Dying</div>
+            <div class="progress-bar">
+                <div class="progress-segment green" style="width: 40%;"></div>
+                <div class="progress-segment blue" style="width: 35%;"></div>
+                <div class="progress-segment gray" style="width: 25%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">Finishing</div>
+            <div class="progress-bar">
+                <div class="progress-segment yellow" style="width: 70%;"></div>
+                <div class="progress-segment red" style="width: 20%;"></div>
+                <div class="progress-segment gray" style="width: 10%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">AOP</div>
+            <div class="progress-bar">
+                <div class="progress-segment yellow" style="width: 60%;"></div>
+                <div class="progress-segment red" style="width: 30%;"></div>
+                <div class="progress-segment gray" style="width: 10%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">Quality</div>
+            <div class="progress-bar">
+                <div class="progress-segment yellow" style="width: 60%;"></div>
+                <div class="progress-segment red" style="width: 25%;"></div>
+                <div class="progress-segment gray" style="width: 15%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">Ready for Delivery</div>
+            <div class="progress-bar">
+                <div class="progress-segment yellow" style="width: 50%;"></div>
+                <div class="progress-segment red" style="width: 30%;"></div>
+                <div class="progress-segment gray" style="width: 20%;"></div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        const data = [
+            { label: "Knitting", segments: [50, 25, 25] },
+            { label: "Dying", segments: [40, 35, 25] },
+            { label: "Finishing", segments: [60, 30, 10] },
+            { label: "AOP", segments: [55, 35, 10] },
+            { label: "Quality", segments: [45, 40, 15] },
+            { label: "Ready for Delivery", segments: [65, 25, 10] }
+        ];
+
+        const colors = ['#2AAACB', '#4CAF50', '#FFB400', '#FF5722', '#FFC107', '#E91E63'];
+
+        function getRandomColor() {
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function createProgressBar(label, segments) {
+            const container = document.createElement('div');
+            container.classList.add('progress-container');
+
+            const labelElement = document.createElement('div');
+            labelElement.classList.add('progress-label');
+            labelElement.textContent = label;
+
+            const progressBar = document.createElement('div');
+            progressBar.classList.add('progress-bar');
+
+            segments.forEach((width) => {
+                const segment = document.createElement('div');
+                segment.classList.add('progress-segment');
+                segment.style.width = `${width}%`;
+                segment.style.backgroundColor = getRandomColor();
+                progressBar.appendChild(segment);
+            });
+
+            container.appendChild(labelElement);
+            container.appendChild(progressBar);
+            document.getElementById('progress-bars-container').appendChild(container);
+        }
+
+        data.forEach(item => {
+            createProgressBar(item.label, item.segments);
+        });
+    </script>
+
+</html>

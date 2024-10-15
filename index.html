@@ -77,8 +77,8 @@
                 </ul>
 
                 <!-- Log out -->
-                <div class="log-out mt-50 dark-gray fw-bold text-center w-100">
-                    <a class="sing-out w-100 uppercase sidebar-item flex-center gap-10" href="#">
+                <div class="log-out mt-50 dark-gray fw-bold text-left w-100">
+                    <a class="sing-out w-100 uppercase sidebar-item d-flex align-center  gap-10" href="#">
                         <i class="ri-logout-box-line fs-lg "></i> sign out</a>
                 </div>
             </div>
@@ -89,20 +89,305 @@
         </div>
 
 
-        <!-- ************  Sidebar  ************ -->
+        <!-- ************  Body  ************ -->
         <div class="body">
-            <!-- ************  Sidebar  ************ -->
+            <!-- ************  Left  ************ -->
             <div class="left">
-                <div class="header">
+                <div class="header w-100 gap-30 flex-between pl-2">
+                    <div class="d-flex gap-20 fw-medium fit-content dark-gray ">
+                        <i class="ri-home-5-fill fs-xxl"></i>
+                        <div class="title fs-xxxl dark-gray fw-medium">Division Wise</div>
+                    </div>
+                    <div class="flex-1 flex-between search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="input-control radius-0 bg-white w-100" placeholder="Search...">
+                    </div>
+                </div>
 
+                <!-- chart -->
+                <div class="chart">
+
+                </div>
+
+                <!-- box items ACHIVEMENT -->
+                <div class="box-items grid-3 achivement gap-15">
+                    <div class="box">
+                        <div class="title fw-medium dark-gray">Monthly T&A</div>
+
+                        <div class="w-50 box-body text-center">
+                            <div class="chart-container  gap-10">
+                                <canvas class="donutChart" style="height: 120px; "></canvas>
+                                <div class="persent fs-xxl dark-gray">65%</div>
+                            </div>
+                        </div>
+
+                        <div class="bottom bg-orange white-color">
+                            ACHIVEMENT
+                        </div>
+                    </div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+
+
+                <!-- bottom data -->
+                <div class="grid-2 mt-2 gap-15 stock">
+                    <div class="box ">
+                        <div class="head">
+                            <div class="title fw-medium gray">Department Wise T& A</div>
+                            <div class="fs-xs dark-gray">Daily Target Achivement</div>
+                        </div>
+                        <div class="wise flex-column gap-10 mt-4">
+
+                            <div class="progress-container">
+                                <div class="progress-label">Knitting</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-blue" style="width: 70%;"></div>
+                                    <div class="progress-segment bg-green" style="width: 20%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">Dying</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment  bg-blue" style="width: 40%;"></div>
+                                    <div class="progress-segment  bg-green" style="width: 35%;"></div>
+                                    <div class="progress-segment  bg-gray" style="width: 25%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">Finishing</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-orange" style="width: 70%;"></div>
+                                    <div class="progress-segment bg-red" style="width: 20%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">AOP</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-yellow" style="width: 60%;"></div>
+                                    <div class="progress-segment bg-red" style="width: 30%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">Quality</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-yellow" style="width: 60%;"></div>
+                                    <div class="progress-segment bg-red" style="width: 25%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 15%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">Ready for Delivery</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-yellow" style="width: 50%;"></div>
+                                    <div class="progress-segment bg-red" style="width: 30%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 20%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="head">
+                            <div class="title fw-medium gray">Stock Positioning</div>
+                            <div class="fs-xs dark-gray">Requirement wise stock</div>
+                        </div>
+
+                        <div class="d-flex mt-4 px-2 gap-35 positioning">
+                            <div class="fit-content">
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <div class="flex-between flex-1">
+                                <div class="left  text-left dark-gray fs-xs flex-column gap-15">
+                                    <div class="mt-4">Earn</div>
+                                    <div>Dyies</div>
+                                    <div>Chemical</div>
+                                    <div>Item 4</div>
+                                    <div>Item 5</div>
+                                    <div>Other</div>
+                                </div>
+
+                                <!-- persent -->
+                                <div class="right flex-1 flex-column gap-10">
+                                    <div class="income-bar text-right mt-4">55%</div>
+                                    <div class="income-bar text-right">90%</div>
+                                    <div class="income-bar text-right">35%</div>
+                                    <div class="income-bar text-right">60%</div>
+                                    <div class="income-bar text-right">70%</div>
+                                    <div class="income-bar text-right">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- ************  Sidebar  ************ -->
+            <!-- ************  Right  ************ -->
             <div class="right">
+                <div class="right-header flex-center">
+                    <div class="date dark-gray fs-lg" id="date">Month of October </div>
+                </div>
+
+                <!-- right body -->
+                <div class="right-body">
+                    <div>
+                        <div class="text-center">
+                            <div class="sub-title text-center gray right-boyd-header">Gap & Non Gap</div>
+                        </div>
+
+
+                        <!-- gap and non gap -->
+                        <div class="mt-2 gap-non-gap flex-between gap-10">
+                            <!-- items -->
+                            <div class="gap-items flex-column pl-2 gray gap-10 flex-1">
+
+                                <!-- single item -->
+                                <div class="gap-item fs-xs  flex-between w-100">
+                                    <div class="gray ">Old Navy</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="sale flex-center">5</div>
+                                        <div class="stock flex-center">3000</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs flex-between w-100">
+                                    <div class="gray ">Hurley</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="sale flex-center">3</div>
+                                        <div class="stock flex-center">1500</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs flex-between w-100">
+                                    <div class="gray ">K-Mart</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="sale flex-center">8</div>
+                                        <div class="stock flex-center">400</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs flex-between w-100">
+                                    <div class="gray ">Wool-Worth</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="sale flex-center">9</div>
+                                        <div class="stock flex-center">2500</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs  flex-between w-100">
+                                    <div class="gray ">Puma</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="sale flex-center">7</div>
+                                        <div class="stock flex-center">1000</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item total-border fs-xs black-color flex-between w-100">
+                                    <div class=" fw-bold">Total</div>
+                                    <!-- Total -->
+                                    <div class="d-flex  gap-20 total">
+                                        <div class="sale  flex-center">42</div>
+                                        <div class="stock flex-center">11000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- right range -->
+                            <div class="range">
+                                <div class="available"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Order process -->
+                    <div class="mt-5">
+                        <div class="text-center">
+                            <div class="sub-title fs-lg gray right-boyd-header">Order Process Old Navy
+                            </div>
+                        </div>
+                        <div class="flex-column gap-5 mt-1 fs-xs gray px-4">
+                            <div class=" flex-between">
+                                <div>1.S/J</div>
+                                <div>1500</div>
+                            </div>
+                            <div class=" flex-between">
+                                <div>1.Fleece Brush</div>
+                                <div>1500</div>
+                            </div>
+                            <div class=" flex-between">
+                                <div>3.RIB</div>
+                                <div>500</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem Notes -->
+                    <div class="mt-5">
+                        <div class="text-center">
+                            <div class="sub-title  gray fs-lg right-boyd-header">Problem Notes </div>
+                        </div>
+                        <ul class="fs-xs gray mt-1 flex-column gap-5 px-4">
+                            <li>1. Earn is not available</li>
+                            <li>2. Dia Problem</li>
+                            <li>3. Mechine Not available</li>
+                            <li>4. Earn qality failed</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="mt-5">
+                        <div class="text-center">
+                            <div class="sub-title  gray fs-lg right-boyd-header">Order wise Progress</div>
+                        </div>
+                        <div class="w-100" id="chart_div">
+                        </div>
+                    </div>
+
+
+                    <!-- Delivery Progress -->
+                    <div class="old-navy mt-2">
+                        <div class="text-center">
+                            <div class="sub-title  gray fs-lg right-boyd-header">Delivery Progress</div>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="chart-container gap-10 mt-0">
+                                <canvas class="donutChart"></canvas>
+                                <div class="persent title dark-gray">50%</div>
+                            </div>
+
+                            <div class="flex-1 ml-2">
+                                <div>
+                                    <div class="title gray fw-medium fs-xxl">OLD NAVY</div>
+                                    <p class="fs-xs dark-gray">Deadline 15th October 2024</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
+        </div>
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/chart.js"></script>
     </body>
 
 </html>

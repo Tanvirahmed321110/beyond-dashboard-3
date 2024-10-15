@@ -7,11 +7,11 @@
 
 :root {
     /*______  Color  ______ */
-    --gray: #7f7f7f;
+    --gray: #787575;
     --dark-gray: #989191;
     --light-gray: #cecdcd;
     --dark: #1b1b1b;
-    --medium-gray: #4d4d4d;
+    --medium-gray: #555454;
     --medium-gray-opacity: #262424;
     --light-blue: #64c2ff;
     --light-yellow: #f8c66c;
@@ -24,6 +24,7 @@
     --bright-green: #71c000;
     --light-cyan: #a1caff;
     --white: #fff;
+    --white-off: #dddada;
 
 
 
