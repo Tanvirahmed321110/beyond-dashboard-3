@@ -140,10 +140,13 @@
 
 /* Chart */
 .chart {
-    width: 100%;
+    width: 100% !important;
     background-color: var(--white);
-    height: 200px;
+    min-height: 250px;
+    max-height: 280px;
+    height: 100% !important;
     margin: 10px 0;
+    padding: 20px !important;
 }
 
 .box {
@@ -194,6 +197,24 @@
     justify-content: center;
 }
 
+
+/* box-1-chart */
+#box-1-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#box-2-chart {
+    width: 100%;
+    /* Adjust width here */
+    height: 200px !important;
+    /* Adjust height here */
+}
+
+#big-chart {
+    width: 100% !important;
+    font-size: var(--fs-xs) !important;
+}
 
 /*__________  wise  __________*/
 .wise .progress-container {

@@ -104,15 +104,16 @@
                     </div>
                 </div>
 
-                <!-- chart -->
-                <div class="chart">
-
+                <!-- chart big-chart -->
+                <div class="chart big-chart w-100">
+                    <canvas class="w-100" id="big-chart"></canvas>
                 </div>
 
                 <!-- box items ACHIVEMENT -->
                 <div class="box-items grid-3 achivement gap-15">
+                    <!-- single box -->
                     <div class="box">
-                        <div class="title fw-medium dark-gray">Monthly T&A</div>
+                        <div class="title  fs-lg fw-medium dark-gray">Monthly T&A</div>
 
                         <div class="w-50 box-body text-center">
                             <div class="chart-container  gap-10">
@@ -125,8 +126,32 @@
                             ACHIVEMENT
                         </div>
                     </div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+
+                    <!-- single box -->
+                    <div class="box">
+                        <div class="title  fs-lg fw-medium dark-gray">Yearly Traget</div>
+                        <div class=" box-body text-center">
+                            <div class="box-1-chart w-100">
+                                <canvas id="box-1-chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="bottom bg-blue white-color">
+                            PROGRESS
+                        </div>
+                    </div>
+
+                    <!-- single box -->
+                    <div class="box">
+                        <div class="title fs-lg fw-medium dark-gray">Daily WIP</div>
+                        <div class="w-100   text-center">
+                            <div class="box-2-chart">
+                                <div id="box-2-chart"></div>
+                            </div>
+                        </div>
+                        <div class="bottom bg-yellow white-color">
+                            ACHIVEMENT
+                        </div>
+                    </div>
                 </div>
 
 
@@ -386,6 +411,7 @@
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
         <script src="js/app.js"></script>
         <script src="js/chart.js"></script>
     </body>

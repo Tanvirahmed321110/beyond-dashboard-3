@@ -48,7 +48,7 @@ function createProgressBar(label, segments) {
 
     container.appendChild(labelElement);
     container.appendChild(progressBar);
-    document.getElementById('progress-bars-container').appendChild(container);
+    // document.getElementById('progress-bars-container').appendChild(container);
 }
 
 data.forEach(item => {
