@@ -54,3 +54,14 @@ function createProgressBar(label, segments) {
 data.forEach(item => {
     createProgressBar(item.label, item.segments);
 });
+
+
+
+// colups-btn
+const colupsBtn = document.getElementById('colups-btn')
+const sidebar = document.querySelector('.sidebar')
+
+colupsBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active')
+    document.querySelector('.body').classList.toggle('active')
+})

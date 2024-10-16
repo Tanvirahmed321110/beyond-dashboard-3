@@ -165,25 +165,58 @@ function drawChart() {
 
 
 // Big chart
+// Get the context of the canvas
 const ctx = document.getElementById('big-chart').getContext('2d');
 
+// Create the line chart
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
         datasets: [{
-            data: [220, 270, 200, 400, 380],
+            data: [270, 200, 400, 210, 380],
             borderColor: 'orange',
-            borderWidth: 6, // Line thickness
+            borderWidth: 5, // Line thickness
             pointBackgroundColor: '#000',
             pointBorderColor: '#000',
-            pointRadius: 6, // Point size
+            pointRadius: 5, // Point size
             fill: false,
-            tension: 0.4
+            tension: 0.4,
         }]
     },
     options: {
         responsive: true,
+        plugins: {
+            tooltip: {
+                enabled: false // Disable tooltips
+            },
+            legend: {
+                display: false // Hide legend
+            },
+            datalabels: { // Datalabels plugin options
+                display: true, // Ensure this is true to show data labels
+                color: 'black',
+                align: 'top',
+                anchor: 'end',
+                font: {
+                    size: 8// Font size for data labels
+                },
+                formatter: (value, context) => {
+                    return value; // Show the actual value
+                },
+                backgroundColor: function (context) {
+                    // Customize background color for each label
+                    const value = context.dataset.data[context.dataIndex];
+                    if (value === 270) return 'orange';
+                    if (value === 200) return 'red';
+                    if (value === 400) return 'teal';
+                    if (value === 210) return 'teal';
+                    return 'grey';
+                },
+                borderRadius: 4, // Rounded corners for the label background
+                padding: 3 // Padding around the text
+            }
+        },
         scales: {
             x: {
                 beginAtZero: true,
@@ -192,9 +225,6 @@ const myChart = new Chart(ctx, {
                 },
                 ticks: {
                     display: false // Hide x-axis labels
-                },
-                title: {
-                    display: false // Hide x-axis title
                 }
             },
             y: {
@@ -202,30 +232,11 @@ const myChart = new Chart(ctx, {
                 suggestedMin: 0,
                 suggestedMax: 500,
                 ticks: {
-                    display: true, // Hide y-axis labels
-                    stepSize: 100 // Customize step size if needed
-                },
-                title: {
-                    display: true // Hide y-axis title
-                }
-            }
-        },
-        plugins: {
-            tooltip: {
-                enabled: false // Disable tooltips
-            },
-            legend: {
-                display: false // Hide legend
-            },
-            datalabels: {
-                display: true,
-                color: 'black',
-                align: 'top',
-                anchor: 'end',
-                font: {
-                    size: 14 // Font size for data labels
+                    display: true, // Show y-axis labels
+                    stepSize: 100 // Customize step size
                 }
             }
         }
-    }
+    },
+    plugins: [ChartDataLabels] // Ensure this is included
 });
