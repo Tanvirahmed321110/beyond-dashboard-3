@@ -1,0 +1,16 @@
+.body {
+    margin-top: 20px;
+}
+
+.right {
+    margin-top: 0;
+}
+
+.right-header {
+    padding: 22px;
+    border-bottom: 10px solid var(--white-off);
+}
+
+.stock .box {
+    min-height: 410px;
+}

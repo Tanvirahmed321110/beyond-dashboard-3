@@ -1,0 +1,37 @@
+/******************
+****  Management  ***
+********************/
+.body {
+    width: calc(100% - 345px);
+    margin: 20px;
+    margin-left: 325px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    transition: .2s linear;
+    margin-top: -16px;
+    align-items: stretch;
+    height: fit-content;
+}
+
+.right {
+    background-color: var(--white);
+    margin-top: 10px;
+}
+
+/*__________  Header ___________ */
+header .header {
+    width: calc(100% - 345px);
+    margin: 20px;
+    margin-left: 325px;
+}
+
+.search-icon {
+    color: var(--dark-gray);
+}
+
+
+.stock .box {
+    padding: 25px 15px;
+    min-height: 340px;
+}

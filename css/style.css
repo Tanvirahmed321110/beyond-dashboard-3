@@ -55,6 +55,55 @@
 
 
 /*_______ Sidebar Items _______ */
+.sidebar-items li {
+    position: relative;
+}
+
+.sidebar-items li .dropdown {
+    position: absolute;
+    right: -140px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--gray);
+    width: 160px;
+    padding: 15px;
+    border-radius: 4px;
+    color: var(--white-off);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -2;
+    transition: .3s linear;
+}
+
+.sidebar-items li:hover .dropdown {
+    right: -160px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.sidebar-items li .dropdown a {
+    border-bottom: 1px solid var(--dark-gray);
+    padding-bottom: 4px;
+}
+
+.sidebar-items li .dropdown a:hover {
+    color: var(--light-orange);
+}
+
+.sidebar-items li .dropdown::after {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: calc(50% - 7px);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--gray);
+    transform: rotate(154deg);
+}
+
 .sidebar .sidebar-item {
     padding: 12px 48px;
 }
@@ -449,4 +498,46 @@
 .donutChart {
     width: 100% !important;
     height: 200px !important;
+}
+
+
+
+
+
+/******************************
+****  Management / planing ***
+******************************/
+.body {
+    width: calc(100% - 345px);
+    margin: 20px;
+    margin-left: 325px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    transition: .2s linear;
+    margin-top: -16px;
+    align-items: stretch;
+    height: fit-content;
+}
+
+.right {
+    background-color: var(--white);
+    margin-top: 10px;
+}
+
+/*__________  Header ___________ */
+header .header {
+    width: calc(100% - 345px);
+    margin: 20px;
+    margin-left: 325px;
+}
+
+.search-icon {
+    color: var(--dark-gray);
+}
+
+
+.stock .box {
+    padding: 25px 15px;
+    min-height: 340px;
 }

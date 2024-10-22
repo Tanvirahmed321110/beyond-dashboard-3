@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planning</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+
+        <!-- ************  Sidebar  ************ -->
+        <div class="sidebar">
+            <div class="sidebar-area">
+
+                <!-- Logo -->
+                <div class="logo flex-center gap-20">
+                    <div class="logo-box">
+                        <div class="logo-sub-box"></div>
+                    </div>
+                    <h2 class="uppercase white-color fs-xxl">arkay <br> knit deying
+                </div>
+
+                <!-- sidebar items -->
+                <ul class="mt-4 flex-column sidebar-items gap-10">
+                    <li>
+                        <a class="sidebar-item active flex-start dark-gray fw-medium justify-start gap-20 p-4"
+                            href="../index.html">
+                            <i class="ri-home-5-fill fs-xxl"></i>
+                            <div class="fs-md">
+                                Dashboard
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item  flex-start dark-gray fw-medium justify-start gap-20 p-4" href="#">
+                            <i class="ri-bar-chart-fill fs-xxl"></i>
+                            <div class="fs-md flex-center gap-10">
+                                Inventory
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item  flex-start dark-gray fw-medium justify-start gap-20 p-4" href="#">
+                            <i class="fas fa-project-diagram fs-xxl"></i>
+                            <div class="fs-md flex-center gap-10">
+                                Department
+                            </div>
+                        </a>
+
+                        <!-- Dropdown -->
+                        <div class="dropdown flex-column gap-10">
+                            <a class="fs-xs" href="../planning/index.html">Planning</a>
+                            <a class="fs-xs" href="../buyer/buyer.html">Buyer</a>
+                            <a class="fs-xs" href="../home.html">Management</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="sidebar-item  flex-start dark-gray fw-medium justify-start gap-20 p-4" href="#">
+                            <i class="ri-chat-2-fill fs-xxl"></i>
+                            <div class="fs-md">
+                                Work Order
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item  flex-start dark-gray fw-medium justify-start gap-20 p-4" href="#">
+                            <i class="ri-mail-open-fill fs-xxl"></i>
+                            <div class="fs-md">
+                                Requisition
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item  flex-start dark-gray fw-medium justify-start gap-20 p-4" href="#">
+                            <i class="ri-user-3-fill fs-xxl"></i>
+                            <div class="fs-md flex-center gap-10">
+                                Progress
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item  flex-start dark-gray fw-medium justify-start gap-20 p-4" href="#">
+                            <i class="ri-settings-5-fill fs-xxl"></i>
+                            <div class="fs-md ">
+                                Setting
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Log out -->
+                <div class="log-out mt-50 dark-gray fw-bold text-left w-100">
+                    <a class="sing-out w-100 uppercase sidebar-item d-flex align-center  gap-10" href="#">
+                        <i class="ri-logout-box-line fs-lg "></i> sign out</a>
+                </div>
+            </div>
+
+            <button class="sidebar-button flex-center text-right" id="colups-btn">
+                <i class="fa-solid fa-caret-left fs-xxl"></i>
+            </button>
+        </div>
+
+
+        <header>
+            <div class="header w-100 gap-30 flex-between pl-2">
+                <div class="d-flex gap-20 fw-medium fit-content gray ">
+                    <i class="ri-home-5-fill  fs-xxl"></i>
+                    <div class="title fs-xxl gray fw-medium">Dashboard</div>
+                </div>
+                <div class="flex-1 flex-between search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="input-control radius-0 bg-white w-100" placeholder="Search...">
+                </div>
+            </div>
+        </header>
+
+
+        <!-- ************  Body  ************ -->
+        <div class="body">
+            <!-- ************  Left  ************ -->
+            <div class="left">
+                <!-- <div class="header w-100 gap-30 flex-between pl-2">
+                    <div class="d-flex gap-20 fw-medium fit-content dark-gray ">
+                        <i class="ri-home-5-fill fs-xxl"></i>
+                        <div class="title fs-xxxl dark-gray fw-medium">Dashboard</div>
+                    </div>
+                    <div class="flex-1 flex-between search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="input-control radius-0 bg-white w-100" placeholder="Search...">
+                    </div>
+                </div> -->
+
+                <!-- chart big-chart -->
+                <div class="chart big-chart w-100">
+                    <canvas class="w-100" id="big-chart"></canvas>
+                </div>
+
+                <!-- box items ACHIVEMENT -->
+                <div class="box-items grid-3 achivement gap-15">
+                    <!-- single box -->
+                    <div class="box">
+                        <div class="title  fs-lg fw-medium dark-gray">Monthly Target</div>
+
+                        <div class="w-50 box-body text-center">
+                            <div class="chart-container  gap-10">
+                                <canvas class="donutChart" style="height: 120px; "></canvas>
+                                <div class="persent fs-xxl dark-gray">65%</div>
+                            </div>
+                        </div>
+
+                        <div class="bottom bg-orange white-color">
+                            ACHIVEMENT
+                        </div>
+                    </div>
+
+                    <!-- single box -->
+                    <div class="box">
+                        <div class="title  fs-lg fw-medium dark-gray">Yearly Target</div>
+                        <div class=" box-body text-center">
+                            <div class="box-1-chart w-100">
+                                <canvas id="box-1-chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="bottom bg-blue white-color">
+                            PROGRESS
+                        </div>
+                    </div>
+
+                    <!-- single box -->
+                    <div class="box">
+                        <div class="title fs-lg fw-medium dark-gray">Daily Progress</div>
+                        <div class="w-100   text-center">
+                            <div class="box-2-chart">
+                                <div id="box-2-chart"></div>
+                            </div>
+                        </div>
+                        <div class="bottom bg-yellow white-color">
+                            ACHIVEMENT
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- bottom data -->
+                <div class="grid-2 mt-4 gap-15 stock">
+                    <div class="box ">
+                        <div class="head">
+                            <div class="title fw-medium gray">Department Wise T& A</div>
+                            <div class="fs-xs dark-gray">Daily Target Achivement</div>
+                        </div>
+                        <div class="wise flex-column gap-10 mt-4">
+
+                            <div class="progress-container">
+                                <div class="progress-label">Department Name 1</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-blue" style="width: 70%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">Department Name 2</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment  bg-blue" style="width: 40%;"></div>
+                                    <div class="progress-segment  bg-gray" style="width: 25%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">Department Name 3</div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-orange" style="width: 70%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-label">Department Name </div>
+                                <div class="progress-bar">
+                                    <div class="progress-segment bg-yellow" style="width: 60%;"></div>
+                                    <div class="progress-segment bg-gray" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="head">
+                            <div class="title fw-medium gray">Stock Positioning</div>
+                            <div class="fs-xs dark-gray">Requirement wise stock</div>
+                        </div>
+
+                        <div class="d-flex mt-4 px-2 gap-35 positioning">
+                            <div class="fit-content">
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <div class="flex-between flex-1">
+                                <div class="left  text-left dark-gray fs-xs flex-column gap-15">
+                                    <div class="mt-4">Earn</div>
+                                    <div>Dyies</div>
+                                    <div>Chemical</div>
+                                    <div>Item 4</div>
+                                    <div>Item 5</div>
+                                    <div>Other</div>
+                                </div>
+
+                                <!-- persent -->
+                                <div class="right flex-1 flex-column gap-10">
+                                    <div class="income-bar text-right mt-4">55%</div>
+                                    <div class="income-bar text-right">90%</div>
+                                    <div class="income-bar text-right">35%</div>
+                                    <div class="income-bar text-right">60%</div>
+                                    <div class="income-bar text-right">70%</div>
+                                    <div class="income-bar text-right">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ************  Right  ************ -->
+            <div class="right">
+
+                <!-- right body -->
+                <div class="right-body">
+                    <div>
+                        <div class="text-center mt-4">
+                            <div class="sub-title text-center gray right-boyd-header">Requisition</div>
+                        </div>
+
+
+                        <!-- gap and non gap -->
+                        <div class="mt-2 gap-non-gap flex-between gap-10">
+                            <!-- items -->
+                            <div class="gap-items flex-column pl-2 gray gap-10 flex-1">
+
+                                <!-- single item -->
+                                <div class="gap-item fs-xs  flex-between w-100">
+                                    <div class="gray ">Central Store</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="sale flex-center">435</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs flex-between w-100">
+                                    <div class="gray ">Planning</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="stock flex-center">1500</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs flex-between w-100">
+                                    <div class="gray ">Knitting</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="stock flex-center">400</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs flex-between w-100">
+                                    <div class="gray ">Lab</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="stock flex-center">2500</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs  flex-between w-100">
+                                    <div class="gray ">Quality Control</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="stock flex-center">1000</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item fs-xs  flex-between w-100">
+                                    <div class="gray ">ACP</div>
+                                    <div class="d-flex gap-20">
+                                        <div class="stock flex-center">1000</div>
+                                    </div>
+                                </div>
+                                <!-- single item -->
+                                <div class="gap-item total-border fs-xs black-color flex-between w-100">
+                                    <div class=" fw-bold">Total</div>
+                                    <!-- Total -->
+                                    <div class="d-flex  gap-20 total">
+                                        <div class="stock flex-center">11000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- right range -->
+                            <div class="range">
+                                <div class="available"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Order Progress Chart -->
+                    <div class="mt-50">
+                        <div class="text-center">
+                            <div class="sub-title  gray fs-lg right-boyd-header">Order wise Progress</div>
+                        </div>
+                        <div class="w-100" id="chart_div">
+                        </div>
+                    </div>
+
+
+                    <!-- Delivery Progress -->
+                    <div class="old-navy mt-5">
+                        <div class="text-center">
+                            <div class="sub-title  gray fs-lg right-boyd-header">Delivery Progress</div>
+                        </div>
+
+                        <div class="progress-container mt-5">
+                            <div class="chart-container gap-10 mt-0">
+                                <canvas class="donutChart"></canvas>
+                                <div class="persent title dark-gray">50%</div>
+                            </div>
+
+                            <div class="flex-1 ml-2 w-50">
+                                <div class="w-100">
+                                    <div class="title gray fw-bold fs-sm">X Appeniats Limited</div>
+                                    <p class="fs-xs dark-gray">Let me know if this needs further adjustments!</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/chart.js"></script>
+    </body>
+
+</html>

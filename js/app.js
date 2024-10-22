@@ -1,11 +1,13 @@
+const dateTag = document.getElementsByClassName('date')[0]
+if (dateTag) {
+    function dateF(id) {
+        const date = new Date()
+        const formateDate = date.toLocaleString('default', { month: 'long', year: 'numeric' })
+        document.getElementById(id).innerText = 'Month Of ' + formateDate
+    }
 
-function dateF(id) {
-    const date = new Date()
-    const formateDate = date.toLocaleString('default', { month: 'long', year: 'numeric' })
-    document.getElementById(id).innerText = 'Month Of ' + formateDate
+    dateF('date')
 }
-
-dateF('date')
 
 
 
